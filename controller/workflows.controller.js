@@ -29,9 +29,9 @@ const workflowsController = {
     },
     create: async (req, res) => {
         try {
-            const { title, content } = req.body
-            const sql = "insert into workflows (title, content) values (?, ?)"
-            const [rows, fields] = await pool.query(sql, [title, content])
+            const { status } = req.body
+            const sql = "insert into workflows (status) values (?)"
+            const [rows, fields] = await pool.query(sql, [status])
             res.json({
                 data: rows
             })
@@ -46,8 +46,8 @@ const workflowsController = {
         try {
             const { title, content } = req.body
             const { id } = req.params
-            const sql = "update workflows set title = ?, content = ? where id = ?"
-            const [rows, fields] = await pool.query(sql, [title, content, id])
+            const sql = "update workflows set status = ? where id = ?"
+            const [rows, fields] = await pool.query(sql, [status, id])
             res.json({
                 data: rows
             })
