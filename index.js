@@ -11,6 +11,7 @@ const authRouter = require('./routes/auth.router')
 
 app.use("/api/v1/posts", postsRouter)
 app.use("/api/v1/auth", authRouter)
+app.use("/api/v1/workflows",workflowsRouter)
 
 const PORT = process.env.PORT || 5000
 
