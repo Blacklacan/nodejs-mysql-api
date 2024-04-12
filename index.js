@@ -8,7 +8,7 @@ app.use(express.json())
 
 const postsRouter = require('./routes/posts.router')
 const authRouter = require('./routes/auth.router')
-const workflowsRouter = require('./workflowsRouter');
+const workflowsRouter = require('./workflows.router');
 
 app.use("/api/v1/posts", postsRouter)
 app.use("/api/v1/auth", authRouter)
