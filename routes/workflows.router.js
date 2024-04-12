@@ -1,7 +1,7 @@
 const express = require("express")
 const router = express.Router()
 
-const workflowsController = require("../controller/posts.controller")
+const workflowsController = require("../controller/workflows.controller")
 
 router.get("/", workflowsController.getAll)
 router.get("/:id", workflowsController.getById)
