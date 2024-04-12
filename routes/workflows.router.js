@@ -8,5 +8,5 @@ router.get("/:id", workflowsController.getById)
 router.post("/", workflowsController.create)
 router.put("/:id", workflowsController.update)
 router.delete("/:id", workflowsController.delete)
-
-module.exports = router
+const workflowsrouter = router;
+module.exports = workflowsrouter
