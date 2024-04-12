@@ -44,7 +44,7 @@ const workflowsController = {
     },
     update: async (req, res) => {
         try {
-            const { title, content } = req.body
+            const { status } = req.body
             const { id } = req.params
             const sql = "update workflows set status = ? where id = ?"
             const [rows, fields] = await pool.query(sql, [status, id])
